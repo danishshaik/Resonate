@@ -103,7 +103,7 @@ app.post('/account', function(req, res) {
 });
 
 app.get('/login', function(req, res){
-  res.render('login', { user: req.user });
+  res.redirect('/');
 });
 
 // GET /auth/facebook
