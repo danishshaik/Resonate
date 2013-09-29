@@ -275,3 +275,7 @@ li
 {
 text-align: -webkit-match-parent !important;
 }
+
+body {
+	border-top: 5px solid #27ae60;
+}
