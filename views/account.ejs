@@ -1,0 +1,113 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+<script type="text/javascript">
+	filepicker.setKey('Au5J1LW2TQC8G8Qz6ji9yz');
+	function filepickerExecExperience(num) {
+		filepicker.pickAndStore({mimetype:"image/*"}, {location:"S3"}, function(InkBlobs){
+		   $('#experience_'+num+'_imgurl').val(InkBlobs[0].url);
+		});
+
+	}
+
+	function filepickerExecEducation(num) {
+		filepicker.pickAndStore({mimetype:"image/*"}, {location:"S3"}, function(InkBlobs){
+		   $('#education_'+num+'_imgurl').val(InkBlobs[0].url);
+		});
+	}
+
+	var experience = 0;
+	var education = 0;
+	var skill = 0;
+
+	function addExperience() {
+		experience++;
+		var div = document.getElementById('experience_container');
+		var content = '<div class="form-row">';
+	    content +=     '<label for="experience">Experience</label>';
+	    content +=     '<input type="text" name="experience_' + experience + '" class="experience_' + experience + '" required />';
+	    content +=     '<input type="hidden" name="experience_'+ experience +'_imgurl" id="experience_'+ experience +'_imgurl"/>';
+	    content +=     '<button type="button" class="btn" onClick="filepickerExecExperience(' + experience + ')">Upload Image</button>';
+	    content += '</div>';
+		div.innerHTML = div.innerHTML + content;
+		$('#experience_count').val(experience);
+	}
+
+	function addSchool() {
+		education++;
+		var div = document.getElementById('education_container');
+		var content = '<div class="form-row">';
+	    content +=     '<label for="experience">Experience</label>';
+	    content +=     '<input type="text" name="education_' + education + '" class="education_' + education + '" required />';
+	    content +=     '<input type="hidden" name="education_'+ education +'_imgurl" id="education_'+ education +'_imgurl" />';
+	    content +=     '<button type="button" class="btn" onClick="filepickerExecEducation(' + education + ')">Upload Image</button>';
+	    content += '</div>';
+		div.innerHTML = div.innerHTML + content;
+		$('#education_count').val(education);
+	}
+
+	function addSkill() {
+		skill++;
+		var div = document.getElementById('skills_container');
+		var content = '<div class="form-row">';
+	    content +=    '<label for="skills">Skills</label>';
+	    content +=    '<input type="text" name="skill_' + skill +'" class="skill_'+ skill + '" required />';
+	    content += '</div>';
+		div.innerHTML = div.innerHTML + content;
+		$('#skill_count').val(education);
+	}
+
+</script>
+<h2>Hello, <%= user.displayName %>.</h2>
+<form action="/account" method="post" id="resume_form">
+	<div class="form-row">
+        <label for="title">Current title</label>
+        <input type="text" name="title" class="title" required/>
+    </div>
+
+    <div class="form-row">
+        <label for="tagline">Tagline</label>
+        <input type="text" name="tagline" class="tagline" required/>
+    </div>
+
+	<div id="experience_container">
+		<div class="form-row">
+	        <label for="experience">Experience</label>
+	        <input type="text" name="experience_0" class="experience_0" required />
+	        <input type="hidden" name="experience_0_imgurl" id="experience_0_imgurl"/>
+	        <button type="button" class="btn" onClick="filepickerExecExperience(0)">Upload Image</button>
+	    </div> 
+	</div>
+
+	<button type="button" class="btn" onClick="addExperience()">Add Experience</button>
+	<input id="experience_count" name="experience_count" type="hidden" value="0"/>           
+
+    <div id="education_container">
+	    <div class="form-row">
+	        <label for="education">Education</label>
+	        <input type="text" name="education_0" class="education_0" required />
+	        <input type="hidden" name="education_0_imgurl" id="education_0_imgurl"/>
+	        <button type="button" class="btn" onClick="filepickerExecEducation(0)">Upload Image</button>
+	    </div>
+	</div>
+
+	<button type="button" class="btn" onClick="addSchool()">Add School</button>
+	<input id="education_count" name="education_count" type="hidden" value="0"/>            
+
+	<div id="skills_container">
+	    <div class="form-row">
+	        <label for="skills">Skills</label>
+	        <input type="text" name="skill_0" class="skill_0" required />
+	    </div>
+	</div>
+
+	<button type="button" class="btn" onClick="addSkill()">Add Skill</button>
+	<input id="skill_count" name="skill_count" type="hidden" value="0"/>
+
+	<div class="form-row">
+        <label for="contact">Contact email</label>
+        <input type="text" name="contact" class="contact" required />
+    </div>
+
+    <button class="btn" type="submit">Submit</button>
+</form>

@@ -1,0 +1,109 @@
+/*
+Theme Name: Represent
+Description: Represent
+Author: Represent
+Template: represent
+Version: 1
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700,900);
+body.home {
+	background: #000;
+}
+.home .logo-stroke,.home .logo-stroke{display:block;background-repeat:no-repeat;background-image:url(images/logo-stroke.png); margin: 75px auto;
+}@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi){.home .logo-stroke{-webkit-background-size:102px 68px;-moz-background-size:102px 68px;-p-background-size:102px 68px;background-size:102px 68px}}
+.home .logo-stroke{background-position:-136px 0;width:68px;height:68px; position: absolute;
+left: 50%;
+top: 50%;
+margin: -32px 0 0 -32px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)
+{
+.home .logo-stroke{background-position:0 0;}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	outline: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	-webkit-appearance: none;
+	border-radius: 0;
+	-webkit-font-smoothing: antialiased;
+}
+.clear {
+	clear: both;
+}
+#navigation {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	overflow: hidden;
+}
+#navigation ul li {
+	float: left;
+	margin: 0 10px 0 0;
+	height: 20px;
+}
+#navigation ul li:last-of-type {
+	margin: 0 0 0 0;
+}
+#navigation ul li.edit {
+	background: rgba(0, 0, 0, .5);
+}
+#navigation ul li.join {
+	background: #000;
+}
+#navigation ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 1px 8px;
+	color: #fff;
+	font-size: 12px;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+
+.share-white,.share,.share,.share-white,.email,.facebook,.twitter,.twitter,.facebook,.email{display:block;background-repeat:no-repeat;background-image:url(images/share.png)}@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi){.share,.share-white,.email,.facebook,.twitter{-webkit-background-size:130px 20px;-moz-background-size:130px 20px;-p-background-size:130px 20px;background-size:130px 20px}}
+.share-white{background-position:-200px -20px;width:20px;height:18px}
+.share{background-position:-220px 0;width:20px;height:18px}
+.twitter{background-position:-220px -18px;width:20px;height:16px}
+.facebook{background-position:-200px 0;width:20px;height:20px}
+.email{background-position:-240px 0;width:20px;height:15px}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)
+{
+.share{background-position:-20px 0;}
+.share-white{background-position:-40px 0;}
+.email{background-position:-80px 0;}
+.facebook{background-position:0 0;}
+.twitter{background-position:-60px 0;}
+}
+.share, .share-white {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+.social-share {
+	display: none;
+	margin: 40px 0 0;
+}
+.social-share li {
+	margin: 0 0 20px;
+}
+.social-share li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 990px) {
+	#IntercomDefaultWidget {
+		display: none !important;
+	}
+}
+/* Localized */

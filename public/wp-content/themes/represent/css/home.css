@@ -1,0 +1,210 @@
+@media screen and (max-width: 1012px) {
+	body {
+		overflow-x: hidden;
+		min-width: 320px;
+	}
+	.inside {
+		width: 90% !important;
+	}
+	#preview {
+		height: auto !important;
+	}
+	#preview .preview {
+		display: none;
+	}
+	#preview .preview-two {
+		display: block !important;
+	}
+}
+@media screen and (max-width: 775px) {
+	section#features li:last-of-type {
+		display: none;
+	}
+	section#features li {
+		width: 50% !important;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	section#features li:nth-of-type(2) {
+		border: none;
+	}
+}
+@media screen and (max-width: 530px) {
+	#features li p {
+		font-size: 12px !important;
+		padding: 0 25px !important;
+	}
+	.social {
+		display: none;
+	}
+}
+
+body {
+	background: #fff;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+.inside {
+	width: 920px;
+	margin: 0 auto;
+}
+#header {
+	background: #fff;
+	height: 65px;
+}
+.logo{display:block;background-repeat:no-repeat;background-image:url(../images/logo.png); width: 32px; height: 32px; margin: 16px 10px 0 0; float: left;
+}
+.logo{background-position:0 0;width:32px;height:32px; background-size: 48px;}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)
+{
+.logo{background-position:0 0;}
+}
+#header h1 {
+	font: 700 21px/62px "Titillium Web", Arial, sans-serif;
+	float: left;
+}
+#header h1 .name {
+	float: left;
+}
+#header ul {
+	float: right;
+	margin: 15px 0 0;
+}
+#header ul li {
+	float: left;
+	margin: 0 10px 0 0;
+	position: relative;
+}
+#header ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	padding: 0 15px;
+}
+#header ul li:last-of-type {
+	margin: 0 !important;
+}
+#header ul li .btn {
+	width: auto;
+	height: 29px;
+	border: 2px solid #eee;
+	background: #fff;
+	font-size: 14px;
+	line-height: 27px;
+}
+
+section#intro {
+	background: #000;
+	height: auto;
+	text-align: center;
+	width: 100%;
+	padding: 0 0 70px;
+}
+section#intro h2.sub {
+	padding: 55px 0 0;
+	color: #fff;
+	font: 100 75px "Titillium Web", Arial, sans-serif;
+	display: block;
+}
+section#intro .btn {
+	margin: 30px auto 0;
+	display: block;
+	width: 192px;
+	height: 64px;
+	background: #fff;
+}
+section#intro .btn a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	font: 400 24px/61px "Open Sans", Arial, sans-serif;
+}
+
+.setup,.setup,.designs,.designs,.opportunities,.opportunities,.preview,.preview{display:block;background-repeat:no-repeat;background-image:url(../images/home-sprite.png); margin: 0 auto;
+}@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi){.setup,.designs,.opportunities,.preview{-webkit-background-size:1380px 420px;-moz-background-size:1380px 420px;-p-background-size:1380px 420px;background-size:1380px 420px}}
+.setup{background-position:-1840px -612px;width:32px;height:32px}
+.designs{background-position:-1840px -644px;width:25px;height:32px}
+.opportunities{background-position:-1840px -676px;width:32px;height:32px}
+.preview{background-position:-1840px 0;width:920px;height:420px}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)
+{
+.setup{background-position:-920px -210px;}
+.designs{background-position:-920px -242px;}
+.opportunities{background-position:-920px -274px;}
+.preview{background-position:0 0;}
+}
+
+section#features li {
+	padding: 40px 0 80px;
+	float: left;
+	width: 33%;
+	border-right: 2px solid #eee;
+	text-align: center;
+}
+section#features li:last-of-type {
+	border: none;
+}
+section#features li h3 {
+	font: 600 18px "Titillium Web", Arial, sans-serif;
+	padding: 10px 0 20px;
+	color: #000;
+}
+section#features li p {
+	font-size: 14px;
+	color: #565b66;
+	padding: 0 50px;
+}
+
+section#preview {
+	background: #eee;
+	position: relative;
+	height: 400px;
+	width: 100%;
+}
+section#preview .preview {
+	top: -20px;
+	left: 50%;
+	position: absolute;
+	margin: 0 0 0 -460px;
+}
+section#preview .preview a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+section#preview .preview-two {
+	display: none;
+	width: 90%;
+	margin: 0 auto;
+	padding: 20px 0 0;
+}
+
+footer {
+	height: 65px;
+	background: #fff;
+	border-top: 2px solid #eee;
+}
+footer p.copyright {
+	line-height: 65px;
+	font-size: 12px;
+	color: #888;
+	float: left;
+}
+footer ul.foot {
+	float: right;
+	margin: 19px 0 0;
+}
+footer ul.foot li {
+	float: left;
+	margin: 0 0 0 15px;
+}
+footer ul.foot li a {
+	color: #888;
+	font-size: 12px;
+}
+footer ul.foot li * {
+	vertical-align: middle;
+}
+/* Localized */

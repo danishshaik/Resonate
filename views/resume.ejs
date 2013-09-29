@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <link rel="shortcut icon" type="image/x-icon" href="../wp-content/themes/represent/images/favicon.ico">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>
+         Zuhayeer Musa | Répresent
+      </title>
+      <meta name="description" content="Zuhayeer Musa is on Répresent: Résumés for the web." />
+      <link rel="stylesheet" href="../wp-content/themes/represent/style.css" type="text/css" media="screen" />
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,">
+      <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../wp-content/themes/represent/images/ios/icon-57.png" />
+      <link rel="apple-touch-icon-precomposed" href="../wp-content/themes/represent/images/ios/icon-144.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../wp-content/themes/represent/images/ios/icon-72.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../wp-content/themes/represent/images/ios/icon-114.png" />
+      <meta name="apple-mobile-web-app-title" content="Répresent">
+      <link rel="alternate" type="application/rss+xml" title="Répresent &raquo; Posts by zm Feed" href="feed/index.html" />
+      <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.5.1'></script>
+      <script type='text/javascript' src='http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js?ver=3.5.1'></script>
+      <link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+      <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" />
+      <meta name="generator" content="WordPress 3.5.1" />
+   </head>
+   <body class="archive author author-zm author-2944 chrome" onload="window.scrollTo(0,1);">
+      <script src="../wp-content/themes/represent/js/profile.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="../wp-content/themes/represent/themes/max.css" type="text/css" />
+      <style type="text/css">
+         h2, a {
+         color: #ff8a73;
+         }
+         .share {
+         background-color: #ff8a73;
+         }
+
+		.blue { background-color: #06F; }
+		.green { background-color: #0f9d00; }
+		.red { background-color: #F00; }
+		.yellow { background-color: #ffea00; }
+      </style>
+      
+      <!-- #primary BEGIN -->
+      <div id="represent" style="border-top: 8px solid #ff8a73;">
+         <!-- .hentry BEGIN -->
+         <div id="resume">
+            <!-- .post-title BEGIN -->
+            <div class="upper" style="background: #ff8a73;">
+               <div class="inside">
+                  <div class="wrapper">
+                     <div class="profile-picture"><img alt='' src='<%= user.avatar %>' class='avatar avatar-512 photo' height='512' width='512' /></div>
+                     <div class="brief">
+                        <h1><%= user.displayName %></h1>
+                        <h3><%= resume.title %></h3>
+                        <p><%= resume.tagline %></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- .post-entry BEGIN -->
+         <div class="main">
+            <div class="inside">
+               <ul class="experience">
+                  <div class="wrapper">
+                     <h2>
+                        <div class="experience-icon" style="background-color: #ff8a73;"></div>
+                        Experience
+                     </h2>
+                     <div class="grouping">
+                     	<br/>
+                        <!-- <li>
+                           <h3>Software Engineer Intern</h3>
+                           <h4>Eventable</h4>
+                           <p class="years">Summer 2013</p>
+                           <div class="bio">
+                              <p>Worked on analytics using Django platform. Redesigned frontend for subscription dialog.</p>
+                           </div>
+                        </li> -->
+                        <% for (var i = 0; i < resume.experience_count + 1; i++) { %>
+                           <% if (i == 0) { %>
+	                        <img id="exp0" src="<%= resume.experience_0_imgurl %>" title="<%= resume.experience_0 %>" width="200" height="125"/>
+	                       <% } %>
+	                        <% if (i == 1) { %>
+	                        <img id="exp1" src="<%= resume.experience_1_imgurl %>" title="<%= resume.experience_1 %>" width="200" height="125"/>
+	                        
+	                       <% } %>
+	                        <% if (i == 2) { %>
+	                        <img id="exp2" src="<%= resume.experience_2_imgurl %>" title="<%= resume.experience_2 %>" width="200" height="125"/>
+	                        
+	                       <% } %>
+	                       <% if (i == 3) { %>
+	                        <img id="exp3" src="<%= resume.experience_3_imgurl %>" title="<%= resume.experience_3 %>" width="200" height="125"/>
+	                        
+	                       <% } %>
+	                       <% if (i == 4) { %>
+	                        <img id="exp4" src="<%= resume.experience_4_imgurl %>" title="<%= resume.experience_4 %>" width="200" height="125"/>
+	                        
+	                       <% } %>
+	                       <% if (i == 5) { %>
+	                        <img id="exp5" src="<%= resume.experience_5_imgurl %>" title="<%= resume.experience_5 %>" width="200" height="125"/>
+	                        
+	                       <% } %>
+	                    <% } %>
+                        <div id="filler"></div>
+
+                     </div>
+                  </div>
+               </ul>
+               <ul class="education">
+                  <div class="wrapper">
+                     <h2>
+                        <div class="education-icon" style="background-color: #ff8a73;"></div>
+                        Education
+                     </h2>
+                     <div class="grouping">
+                     	<br/>
+                        <!-- <li>
+                           <h3>Monta Vista High School</h3>
+                           <p class="years">2010-2013</p>
+                           <div class="bio">
+                              <p>Completed AP Computer Science</p>
+                           </div>
+                        </li>
+                        <li>
+                           <h3>De Anza College</h3>
+                           <p class="years">2013-2014</p>
+                           <div class="bio">
+                              <p>Part of the high school College Now program. Taking CIS series courses.</p>
+                           </div>
+                        </li> -->
+                        <% for (var i = 0; i < resume.education_count + 1; i++) { %>
+                           <% if (i == 0) { %>
+	                        <img src="<%= resume.education_0_imgurl %>" title="<%= resume.education_0 %>" width="200" height="125" />
+	                       <% } %>
+	                        <% if (i == 1) { %>
+	                        <img src="<%= resume.education_1_imgurl %>" title="<%= resume.education_1 %>" width="200" height="125" />
+	                       <% } %>
+	                        <% if (i == 2) { %>
+	                        <img src="<%= resume.education_2_imgurl %>" title="<%= resume.education_2 %>" width="200" height="125" />
+	                       <% } %>
+	                       <% if (i == 3) { %>
+	                        <img src="<%= resume.education_3_imgurl %>" title="<%= resume.education_3 %>" width="200" height="125" />
+	                       <% } %>
+	                       <% if (i == 4) { %>
+	                        <img src="<%= resume.education_4_imgurl %>" title="<%= resume.education_4 %>" width="200" height="125" />
+	                       <% } %>
+	                       <% if (i == 5) { %>
+	                        <img src="<%= resume.education_5_imgurl %>" title="<%= resume.education_5 %>" width="200" height="125" />
+	                       <% } %>
+	                    <% } %>
+                     </div>
+                  </div>
+               </ul>
+               <ul class="skills">
+                  <div class="wrapper">
+                     <h2>
+                        <div class="skills-icon" style="background-color: #ff8a73;"></div>
+                        Skills
+                     </h2>
+                     <div class="grouping">
+                     	<% for (var i = 0; i < resume.skill_count + 1; i++) { %>
+	                        <li>
+	                           <% if (i == 0) { %>
+	                           	<h4><%= resume.skill_0 %></h4>
+	                           <% } %>
+	                           <% if (i == 1) { %>
+	                           	<h4><%= resume.skill_1 %></h4>
+	                           <% } %>
+	                           <% if (i == 2) { %>
+	                           	<h4><%= resume.skill_2 %></h4>
+	                           <% } %>
+	                           <% if (i == 3) { %>
+	                           	<h4><%= resume.skill_3 %></h4>
+	                           <% } %>
+	                           <% if (i == 4) { %>
+	                           	<h4><%= resume.skill_4 %></h4>
+	                           <% } %>
+	                        </li>
+	                    <% } %>
+                     </div>
+                  </div>
+               </ul>
+               <ul class="contact">
+                  <div class="wrapper">
+                     <h2>
+                        <div class="contact-icon" style="background-color: #ff8a73;"></div>
+                        Contact
+                     </h2>
+                     <div class="grouping">
+                        <li>
+                           <h4><a style="color:black;"><%= resume.contact %></a></h4>
+                        </li>
+                     </div>
+                  </div>
+               </ul>
+            </div>
+            <div id="footer">
+               <div class="inside">
+                  <p class="represent"><a href="#">Resonate your resume</a></p>
+               </div>
+            </div>
+         </div>
+         <!-- .post-entry END -->
+      </div>
+      <!-- .hentry END -->
+      <!-- Theme Hook -->
+      <script type='text/javascript' src='../wp-content/themes/represent/js/jquery.custom.js?ver=1.0'></script>
+      <!--END body-->
+   </body>
+   <!--END html-->
+</html>
+<!-- Dynamic page generated in 0.594 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2013-09-29 00:36:35 -->
+<!-- super cache -->
+<!-- Localized -->
