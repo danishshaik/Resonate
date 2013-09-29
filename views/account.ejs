@@ -23,11 +23,11 @@
 	function addExperience() {
 		experience++;
 		var div = document.getElementById('experience_container');
-		var content = '<div class="form-row">';
+		var content = '<div class="form-group">';
 	    content +=     '<label for="experience">Experience</label>';
-	    content +=     '<input type="text" name="experience_' + experience + '" class="experience_' + experience + '" required />';
+	    content +=     '<input type="text" name="experience_' + experience + '" class="form-control" placeholder="Work or life experience..." required /><br>';
 	    content +=     '<input type="hidden" name="experience_'+ experience +'_imgurl" id="experience_'+ experience +'_imgurl"/>';
-	    content +=     '<button type="button" class="btn" onClick="filepickerExecExperience(' + experience + ')">Upload Image</button>';
+	    content +=     '<button type="button" class="btn btn-success" onClick="filepickerExecExperience(' + experience + ')">Upload Image</button>';
 	    content += '</div>';
 		div.innerHTML = div.innerHTML + content;
 		$('#experience_count').val(experience);
@@ -36,11 +36,11 @@
 	function addSchool() {
 		education++;
 		var div = document.getElementById('education_container');
-		var content = '<div class="form-row">';
+		var content = '<div class="form-group">';
 	    content +=     '<label for="experience">Experience</label>';
-	    content +=     '<input type="text" name="education_' + education + '" class="education_' + education + '" required />';
+	    content +=     '<input type="text" name="education_' + education + '" class="form-control" placeholder="School attended..." required /><br>';
 	    content +=     '<input type="hidden" name="education_'+ education +'_imgurl" id="education_'+ education +'_imgurl" />';
-	    content +=     '<button type="button" class="btn" onClick="filepickerExecEducation(' + education + ')">Upload Image</button>';
+	    content +=     '<button type="button" class="btn btn-success" onClick="filepickerExecEducation(' + education + ')">Upload Image</button>';
 	    content += '</div>';
 		div.innerHTML = div.innerHTML + content;
 		$('#education_count').val(education);
@@ -49,65 +49,76 @@
 	function addSkill() {
 		skill++;
 		var div = document.getElementById('skills_container');
-		var content = '<div class="form-row">';
+		var content = '<div class="form-group">';
 	    content +=    '<label for="skills">Skills</label>';
-	    content +=    '<input type="text" name="skill_' + skill +'" class="skill_'+ skill + '" required />';
+	    content +=    '<input type="text" name="skill_' + skill +'" class="form-control" placeholder="Skill/talent in field of work..." required />';
 	    content += '</div>';
 		div.innerHTML = div.innerHTML + content;
 		$('#skill_count').val(education);
 	}
 
 </script>
+<div class="container">
 <h2>Hello, <%= user.displayName %>.</h2>
+<hr>
 <form action="/account" method="post" id="resume_form">
-	<div class="form-row">
+	<p>Fill out your resume below.</p><br>
+	<div class="form-group">
         <label for="title">Current title</label>
-        <input type="text" name="title" class="title" required/>
+        <input type="text" name="title" class="form-control" placeholder="Enter your title..." required/>
     </div>
 
-    <div class="form-row">
+    <div class="form-group">
         <label for="tagline">Tagline</label>
-        <input type="text" name="tagline" class="tagline" required/>
+        <input type="text" name="tagline" class="form-control" placeholder="Your tagline here..." required/>
     </div>
 
 	<div id="experience_container">
-		<div class="form-row">
+		<div class="form-group">
 	        <label for="experience">Experience</label>
-	        <input type="text" name="experience_0" class="experience_0" required />
+	        <input type="text" name="experience_0" class="form-control" placeholder="Work or life experience..." required /><br>
 	        <input type="hidden" name="experience_0_imgurl" id="experience_0_imgurl"/>
-	        <button type="button" class="btn" onClick="filepickerExecExperience(0)">Upload Image</button>
+	        <button type="button" class="btn btn-success" onClick="filepickerExecExperience(0)">Upload Image</button>
 	    </div> 
 	</div>
 
-	<button type="button" class="btn" onClick="addExperience()">Add Experience</button>
-	<input id="experience_count" name="experience_count" type="hidden" value="0"/>           
+	<button type="button" class="btn btn-default" onClick="addExperience()">Add Experience</button>
+	<input id="experience_count" name="experience_count" type="hidden" value="0"/>
+	<br><br>           
 
     <div id="education_container">
-	    <div class="form-row">
+	    <div class="form-group">
 	        <label for="education">Education</label>
-	        <input type="text" name="education_0" class="education_0" required />
+	        <input type="text" name="education_0" class="form-control" placeholder="School attended..." required /><br>
 	        <input type="hidden" name="education_0_imgurl" id="education_0_imgurl"/>
-	        <button type="button" class="btn" onClick="filepickerExecEducation(0)">Upload Image</button>
+	        <button type="button" class="btn btn-success" onClick="filepickerExecEducation(0)">Upload Image</button>
 	    </div>
 	</div>
 
-	<button type="button" class="btn" onClick="addSchool()">Add School</button>
-	<input id="education_count" name="education_count" type="hidden" value="0"/>            
+	<button type="button" class="btn btn-default" onClick="addSchool()">Add School</button>
+	<input id="education_count" name="education_count" type="hidden" value="0"/>   
+	<br><br>         
 
 	<div id="skills_container">
-	    <div class="form-row">
+	    <div class="form-group">
 	        <label for="skills">Skills</label>
-	        <input type="text" name="skill_0" class="skill_0" required />
+	        <input type="text" name="skill_0" class="form-control" placeholder="Skill/talent in field of work..." required />
 	    </div>
 	</div>
 
-	<button type="button" class="btn" onClick="addSkill()">Add Skill</button>
+	<button type="button" class="btn btn-default" onClick="addSkill()">Add Skill</button>
 	<input id="skill_count" name="skill_count" type="hidden" value="0"/>
+	<br><br>
 
-	<div class="form-row">
+	<div class="form-group">
         <label for="contact">Contact email</label>
-        <input type="text" name="contact" class="contact" required />
+        <input type="text" name="contact" class="form-control" placeholder="Twitter/email/other contact info..." required />
     </div>
 
-    <button class="btn" type="submit">Submit</button>
+    <br>
+
+    <button class="btn btn-primary" type="submit" style="width:100%;height:80px; font-size:30px;">Submit</button>
+    <br><br>
 </form>
+<br><br>
+</div>
