@@ -200,7 +200,7 @@
             <div id="footer">
                <div class="inside">
                   <p class="represent"><a href="#">Resonate your resume</a></p>
-                  <p class="represent" style="float:right"><button type="button" style="color:black;background:none;border:none;" onClick="func()">Get PDF</button>
+                  <p class="represent" style="float:right"><button type="button" style="color:black;background:none;border:none;" onClick="func()">Get PDF</button></p>
                </div>
             </div>
          </div>
@@ -215,6 +215,7 @@
           /*
          * Create a PDF24 document and set parameters
          */
+
          var doc = new PDF24Doc();
          doc.setCharset("UTF-8");
          doc.setHeadline("Resume");
@@ -223,7 +224,7 @@
          doc.setFilename("Resume");
          doc.setPageSize(210, 297);
 
-         doc.setEmailTo('zuhaz3@gmail.com');
+         doc.setEmailTo("<%= currentuseremail %>");
          doc.setEmailFrom("zuhaz3@gmail.com");
          doc.setEmailSubject("Resume");
          doc.setEmailBody("Here is your PDF Resume. Cheers, Resonate.");

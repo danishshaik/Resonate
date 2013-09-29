@@ -134,7 +134,7 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-app.get('/random', function(req, res){
+app.get('/random', ensureAuthenticated, function(req, res){
   var rootRef = new Firebase('http://resonate.firebaseio.com/');
   rootRef.on('value', function(s) {
     var i = 0;
@@ -142,7 +142,7 @@ app.get('/random', function(req, res){
     s.forEach(function(s) {
       if (i == rand) {
         // picked random item, snapshot.val().
-        res.render('resume', { resume: s.val().resume, user: s.val().user });
+        res.render('resume', { resume: s.val().resume, user: s.val().user, currentuseremail: req.user.emails[0].value });
       }
       i++;
     });
@@ -155,7 +155,7 @@ app.get('/:id', ensureAuthenticated, function(req, res) {
   genRef.on('value', function(s) {
     if (s.val() != null) {
       if (s.val().resume != null) {
-        res.render('resume', { resume: s.val().resume, user: s.val().user });
+        res.render('resume', { resume: s.val().resume, user: s.val().user, currentuseremail: req.user.emails[0].value });
       } else {
         res.redirect('/account');
       }
