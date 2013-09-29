@@ -134,6 +134,21 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
+app.get('/random', function(req, res){
+  var rootRef = new Firebase('http://resonate.firebaseio.com/');
+  rootRef.on('value', function(s) {
+    var i = 0;
+    var rand = Math.floor(Math.random() * s.numChildren());
+    s.forEach(function(s) {
+      if (i == rand) {
+        // picked random item, snapshot.val().
+        res.render('resume', { resume: s.val().resume, user: s.val().user });
+      }
+      i++;
+    });
+  });
+});
+
 app.get('/:id', ensureAuthenticated, function(req, res) {
   var id = req.params.id;
   var genRef = new Firebase('http://resonate.firebaseio.com/'+id);
