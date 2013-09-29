@@ -88,8 +88,8 @@ app.get('/account', ensureAuthenticated, function(req, res){
         res.render('account', { user: req.user });
       // }
     } else {
-      userRef.set({ user: req.user });
       req.user.avatar = gravatar.imageUrl(req.user.emails[0].value, { "size": "600" });
+      userRef.set({ user: req.user });
       res.render('account', { user: req.user });
     }
   });

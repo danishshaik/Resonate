@@ -75,7 +75,7 @@
                               <p>Worked on analytics using Django platform. Redesigned frontend for subscription dialog.</p>
                            </div>
                         </li> -->
-                        <% for (var i = 0; i < resume.experience_count + 1; i++) { %>
+                        <% for (var i = 0; i < parseInt(resume.experience_count) + 1; i++) { %>
                            <% if (i == 0) { %>
 	                        <img id="exp0" src="<%= resume.experience_0_imgurl %>" title="<%= resume.experience_0 %>" width="200" height="125"/>
 	                       <% } %>
@@ -127,7 +127,7 @@
                               <p>Part of the high school College Now program. Taking CIS series courses.</p>
                            </div>
                         </li> -->
-                        <% for (var i = 0; i < resume.education_count + 1; i++) { %>
+                        <% for (var i = 0; i < parseInt(resume.education_count) + 1; i++) { %>
                            <% if (i == 0) { %>
 	                        <img src="<%= resume.education_0_imgurl %>" title="<%= resume.education_0 %>" width="200" height="125" />
 	                       <% } %>
@@ -157,7 +157,7 @@
                         Skills
                      </h2>
                      <div class="grouping">
-                     	<% for (var i = 0; i < resume.skill_count + 1; i++) { %>
+                     	<% for (var i = 0; i < parseInt(resume.skill_count) + 1; i++) { %>
 	                        <li>
 	                           <% if (i == 0) { %>
 	                           	<h4><%= resume.skill_0 %></h4>
