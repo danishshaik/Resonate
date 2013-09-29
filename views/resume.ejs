@@ -200,6 +200,7 @@
             <div id="footer">
                <div class="inside">
                   <p class="represent"><a href="#">Resonate your resume</a></p>
+                  <p class="represent" style="float:right"><button type="button" style="color:black;background:none;border:none;" onClick="func()">Get PDF</button>
                </div>
             </div>
          </div>
@@ -208,6 +209,46 @@
       <!-- .hentry END -->
       <!-- Theme Hook -->
       <script type='text/javascript' src='../wp-content/themes/represent/js/jquery.custom.js?ver=1.0'></script>
+      <script type="text/javascript" src="http://doc2pdf.pdf24.org/js/api.js"></script>
+      <script type="text/javascript">
+      function func() {
+          /*
+         * Create a PDF24 document and set parameters
+         */
+         var doc = new PDF24Doc();
+         doc.setCharset("UTF-8");
+         doc.setHeadline("Resume");
+         doc.setHeadlineUrl(location.href);
+         doc.setBaseUrl(location.href);
+         doc.setFilename("Resume");
+         doc.setPageSize(210, 297);
+
+         doc.setEmailTo('zuhaz3@gmail.com');
+         doc.setEmailFrom("zuhaz3@gmail.com");
+         doc.setEmailSubject("Resume");
+         doc.setEmailBody("Here is your PDF Resume. Cheers, Resonate.");
+         doc.setEmailBodyType("html");
+
+         /*
+         * Create one or more elements
+         */
+         var element = new PDF24Element();
+         element.setUrl(location.href);
+         // element.setAuthor("Leet ");
+         // element.setDateTime(ne);
+         element.setBody($('#represent').html());
+
+         /*
+         * Add the element
+         */
+         doc.addElement(element);
+
+         /*
+         * Create the PDF file
+         */
+         doc.create();
+       }
+       </script>
       <!--END body-->
    </body>
    <!--END html-->
